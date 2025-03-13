@@ -3,7 +3,7 @@ library(ggplot2)
 library(gridExtra)
 library(tidyverse)
 
-df <- read_dta("ETKR81FL_BMC.dta")
+df <- read_dta("ETKR81FL.dta")
 
 # Create individual plots for each variable
 create_plot <- function(x_var, title, x_label) {
