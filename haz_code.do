@@ -20,7 +20,7 @@ replace bf=1 if v426==0
 replace bf=2 if v426>=101
 label values bf yesno2
 
-*vaccination
+*child got vaccination
 clonevar vac = h10
 replace vac=1 if h10==1
 replace vac=0 if h10==0 | h10==8
@@ -41,23 +41,23 @@ gen del= inrange(m15,11,12)
 label values del yesno
 
 
-*water source (wtr)
+*is water source improved (wtr)
 recode v113 (11/15 21 31 41 51 61/73 = 1 "improved water") (30 32 40 42 43 96 = 0 "unimproved/surface water") (99=99 "missing"), gen(wtr)
 
 
-*santiation (def)
-recode v116 (11/13 15 21 22 41 51 14 23 42 43 96 = 0 "unimproved sanitation") (31 = 1 "open defecation") (99=.), gen(def)
+*uses open defecation as santiation (def)
+recode v116 (11/13 15 21 22 41 51 14 23 42 43 96 = 0 "non open defecation") (31 = 1 "open defecation") (99=.), gen(def)
 
-*radio
+* owns radio
 clonevar radio = v120
 
-*electricity
+* has access to electricity
 clonevar ele = v119
 
-*tv
+* owns tv
 clonevar tv = v121
 
-*floor
+*is floor earth or dung
 clonevar floor = v127
 replace floor=. if v127==0
 replace floor=1 if v127==11 |v127==12
@@ -70,7 +70,7 @@ replace region=1 if v024==10
 replace region=0 if v024<10 |v024==11
 label values region yesno
 
-*mother non-Christian
+*is mother non-Christian
 clonevar religion = v130
 replace religion=0 if v130 <= 3
 replace religion=1 if v130 > 3
@@ -86,11 +86,11 @@ label values literacy yesno
 clonevar wi= v191
 replace wi = wi/100000
 
-*solid fuel for cooking
+*uses solid fuel for cooking
 gen fsolid= inrange(v161,6,11) 
 label values fsolid yesno
 
-*clean fuel for cooking
+*uses clean fuel for cooking
 gen fclean= inrange(v161,1,4) 
 label values fclean yesno
 
