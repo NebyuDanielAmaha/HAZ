@@ -85,7 +85,7 @@ The code uses `ggplot2` and `gridExtra` packages to create and arrange the plots
 
 1.  Ensure you have R and RStudio (or another R IDE) installed.
 2.  Install the required R packages: `haven`, `ggplot2`, `gridExtra`, and `tidyverse`.
-3.  Obtain the `ETKR81FL_BMC.dta` file from the DHS Program and place it in the correct directory.
+3.  Obtain the `ETKR81FL.dta` file from the DHS Program and place it in the correct directory.
 4.  Open `Figure_1_Generation.R` in RStudio.
 5.  Run the code.
 
