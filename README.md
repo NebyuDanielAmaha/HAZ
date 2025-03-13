@@ -10,7 +10,7 @@ This repository contains the Stata code used for data cleaning and multilevel re
 
 ## Data Access
 
-**Important:** The raw data files `ETKR81FL.DTA` and `ETKR81FL_BMC.dta` are **not included** in this repository. These files are subject to data access policies and must be requested through the DHS Program (Demographic and Health Surveys) Measure website.
+**Important:** The raw data file `ETKR81FL.DTA` is **not included** in this repository. This file is subject to data access policies and must be requested through the DHS Program (Demographic and Health Surveys) Measure website.
 
 To request these data files:
 
